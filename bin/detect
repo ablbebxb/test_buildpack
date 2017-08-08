@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+sonar_path = File.join ARGV[0], "sonarqube"
+
+if File.directory?(sonar_path)
+  puts "Valid Sonar Install Found"
+  exit 0
+else
+  exit 1
+end

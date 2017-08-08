@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+$stdout.sync = true
+
+build_path = ARGV[0]
+cache_path = ARGV[1]
+
+puts "Installing Java"
+%x(add-apt-repository ppa:webupd8team/java)
+%x(apt-get update)
+%x(apt-get install oracle-java8-set-default)
